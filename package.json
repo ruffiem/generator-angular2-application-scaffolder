@@ -1,0 +1,62 @@
+{
+  "name": "generator-angular-2-application-scaffolder",
+  "version": "0.0.0",
+  "description": "Angular2 Application Scaffolder is designed to be an application generator for Yeoman providing a full stack working environment for Angular2 (beta 15+) developments.",
+  "homepage": "https://github.com/ruffiem/generator-angular2-application-scaffolder",
+  "author": {
+    "name": "ruffiem",
+    "email": "ruffiem@gmail.com",
+    "url": "https://github.com/ruffiem/"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "Angular2",
+    "Yeoman",
+    "Gulp",
+    "Sass",
+    "TypeScript",
+    "Live Reload",
+    "Bower",
+    "Karma",
+    "Jasmine",
+    "Protractor",
+    "Bootstrap",
+    "jQuery",
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.22.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "yeoman-test": "^1.0.0",
+    "yeoman-assert": "^2.0.0",
+    "eslint": "^2.1.0",
+    "eslint-config-xo-space": "^0.12.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-coveralls": "^0.1.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "https://github.com/Homebrew/homebrew",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "MIT"
+}

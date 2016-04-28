@@ -1,0 +1,30 @@
+{
+  "name": "generator.dev",
+  "description": "Angular2 full-stack application scaffolder",
+  "main": "index.html",
+  "authors": [
+    "Michel Ruffieux"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular2",
+    "karma",
+    "proctator",
+    "jade",
+    "bootstrap",
+    "material2",
+    "sass",
+    "gulp"
+  ],
+  "homepage": "https://github.com/ruffiem/angular2-full-stack-scaffolder",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
