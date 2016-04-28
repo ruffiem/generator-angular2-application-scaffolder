@@ -1,7 +1,7 @@
 {
-  "name": "generator.dev",
+  "name": "My Angular2 App",
   "version": "1.0.0",
-  "description": "Angular2 full-stack application scaffolder",
+  "description": "Angular2 application ",
   "main": "index.html",
   "scripts": {
     "test": "karma"

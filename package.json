@@ -53,7 +53,7 @@
       "mocha": true
     }
   },
-  "repository": "https://github.com/Homebrew/homebrew",
+  "repository": "https://github.com/ruffiem/generator-angular2-application-scaffolder",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
