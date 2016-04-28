@@ -1,9 +1,9 @@
 {
-  "name": "generator.dev",
-  "description": "Angular2 full-stack application scaffolder",
+  "name": "My Angular2 App",
+  "description": "Angular2 application",
   "main": "index.html",
   "authors": [
-    "Michel Ruffieux"
+    "ruffiem"
   ],
   "license": "MIT",
   "keywords": [
@@ -16,7 +16,7 @@
     "sass",
     "gulp"
   ],
-  "homepage": "https://github.com/ruffiem/angular2-full-stack-scaffolder",
+  "homepage": "https://github.com/ruffiem/generator-angular2-application-scaffolder",
   "ignore": [
     "**/.*",
     "node_modules",

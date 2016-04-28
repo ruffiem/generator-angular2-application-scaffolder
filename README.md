@@ -1,6 +1,6 @@
 # Angular2 Application Scaffolder
 
-[![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]  [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ruffiem/angular2-application-scaffolder/blob/master/LICENSE)   [![Twitter](https://img.shields.io/twitter/url/https/github.com/ruffiem/generator-gulp-angular2.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=http://ow.ly/4n9sS0)
+[![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]  [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ruffiem/generator-angular2-application-scaffolder/blob/master/LICENSE)   [![Twitter](https://img.shields.io/twitter/url/https/github.com/ruffiem/generator-gulp-angular2.svg?style=social)](https://twitter.com/intent/tweet?text=Angular2-application-scaffolder:&url=http://ow.ly/4nbJ8f)
 
 ### What is it ?
 Angular2 Application Scaffolder is designed to be an application generator for Yeoman providing a full stack working environment for Angular2 (beta 15+) developments.
@@ -17,13 +17,13 @@ First, install [Yeoman](http://yeoman.io) and angular-2-application-scaffolder u
 
 ```bash
 $ npm install -g yo
-$ npm install -g generator-angular-2-application-scaffolder
+$ npm install -g generator-angular2-application-scaffolder
 ```
 
 Then generate your new project:
 
 ```bash
-$ yo generator-angular-2-application-scaffolder
+$ yo generator-angular2-application-scaffolder
 ```
 
 Then go to your project folder and run

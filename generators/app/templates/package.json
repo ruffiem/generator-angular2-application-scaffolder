@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ruffiem/angular2-full-stack-scaffolder.git"
+    "url": "git+https://github.com/ruffiem/generator-angular2-application-scaffolder"
   },
   "keywords": [
     "angular2",
@@ -23,9 +23,9 @@
   "author": "Michel Ruffieux",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ruffiem/angular2-full-stack-scaffolder/issues"
+    "url": "https://github.com/ruffiem/generator-angular2-application-scaffolder/issues"
   },
-  "homepage": "https://github.com/ruffiem/angular2-full-stack-scaffolder#readme",
+  "homepage": "https://github.com/ruffiem/generator-angular2-application-scaffolder#readme",
   "dependencies": {
     "angular2": "^2.0.0-beta.16",
     "es6-module-loader": "^0.17.11",
