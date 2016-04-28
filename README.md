@@ -36,7 +36,7 @@ This command will run a live reload server and will watch for changes to instant
 
 ### License
 
-MIT © [ruffiem](ruffiem@gmail.com)
+MIT © [ruffiem](mailto:ruffiem@gmail.com)
 
 [yo]: https://pbs.twimg.com/profile_images/3786155988/46ea2dd8b1bdd31a8ba61044cb5b6ebe_normal.png "Yeoman"
 [gulp]: https://pbs.twimg.com/profile_images/417078109075034112/iruTC031_normal.png "Gulp"
