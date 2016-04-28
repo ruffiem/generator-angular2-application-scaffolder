@@ -40,7 +40,6 @@
     "systemjs": "^0.19.26",
     "systemjs-builder": "^0.15.15",
     "typescript": "^1.8.10",
-    "wrench": "^1.5.9",
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
