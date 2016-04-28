@@ -17,13 +17,13 @@ First, install [Yeoman](http://yeoman.io) and angular-2-application-scaffolder u
 
 ```bash
 $ npm install -g yo
-$ npm install -g angular2-application-scaffolder
+$ npm install -g generator-angular-2-application-scaffolder
 ```
 
 Then generate your new project:
 
 ```bash
-$ yo angular-2-application-scaffolder
+$ yo generator-angular-2-application-scaffolder
 ```
 
 Then go to your project folder and run
