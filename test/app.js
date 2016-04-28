@@ -12,7 +12,11 @@ describe('generator-angular-2-application-scaffolder:app', function () {
 
   it('creates files', function () {
     assert.file([
-      'dummyfile.txt'
+      'bower.json',
+      'gulpfile.js',
+      'package.json',
+      'tsconfig.json',
+      'typings.json'
     ]);
   });
 });

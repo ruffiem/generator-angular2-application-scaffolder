@@ -11,6 +11,13 @@ module.exports = yeoman.Base.extend({
     this.log(yosay(
       chalk.red('Welcome to angular2 application scaffolder')
     ));
+
+    var prompts = [];
+
+    this.prompt(prompts, function (props) {
+      this.props = props;
+      done();
+    }.bind(this));
   },
 
   writing: function () {
@@ -20,10 +27,7 @@ module.exports = yeoman.Base.extend({
       'gulpfile.js',
       'package.json',
       'tsconfig.json',
-      'typings.json',
-      '.jshintrc',
-      '.sass-lint.yml',
-      '.gitignore'
+      'typings.json'
     ];
 
     var dirlist = [
