@@ -50,9 +50,9 @@ MIT © [ruffiem](mailto:ruffiem@gmail.com)
 [bootstrap]: https://pbs.twimg.com/profile_images/378800000195279414/f8404a9d719c7ffce1478ba1a50036f9_normal.png "Bootstrap"
 [jquery]: http://jomboom.com/images/jquery.png "jQuery"
 
-[npm-image]: https://badge.fury.io/js/angular2-application-scaffolder.svg
-[npm-url]: https://npmjs.org/package/angular2-application-scaffolder
-[daviddm-image]: https://david-dm.org/ruffiem/angular2-application-scaffolder.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/ruffiem/angular2-application-scaffolder
-[coveralls-image]: https://coveralls.io/repos/ruffiem/angular2-application-scaffolder/badge.svg
-[coveralls-url]: https://coveralls.io/r/ruffiem/angular2-application-scaffolder
+[npm-image]: https://badge.fury.io/js/generator-angular2-application-scaffolder.svg
+[npm-url]: https://npmjs.org/package/generator-angular2-application-scaffolder
+[daviddm-image]: https://david-dm.org/ruffiem/generator-angular2-application-scaffolder.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/ruffiem/generator-angular2-application-scaffolder
+[coveralls-image]: https://coveralls.io/repos/ruffiem/generator-angular2-application-scaffolder/badge.svg
+[coveralls-url]: https://coveralls.io/r/ruffiem/generator-angular2-application-scaffolder
