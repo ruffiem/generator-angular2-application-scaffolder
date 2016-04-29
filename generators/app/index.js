@@ -28,7 +28,8 @@ module.exports = yeoman.Base.extend({
       'package.json',
       'tsconfig.json',
       'typings.json',
-      'karma.conf.js'
+      'karma.conf.js',
+      'karma-test-shim.js'
     ];
 
     var dirlist = [
