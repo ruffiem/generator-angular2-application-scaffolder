@@ -32,6 +32,12 @@ Then go to your project folder and run
 $ gulp serve
 ````
 
+Unit testing with Karma
+
+````bash
+$ npm test
+````
+
 This command will run a live reload server and will watch for changes to instantly update your local distribution.
 
 ### License

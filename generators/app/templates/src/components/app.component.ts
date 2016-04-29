@@ -6,7 +6,7 @@ import {Component, OnInit} from 'angular2/core';
     styleUrls: ['./components/app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   items:Array<string>;
 
   ngOnInit() {

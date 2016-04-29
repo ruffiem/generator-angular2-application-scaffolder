@@ -12,7 +12,7 @@ System.config({
     packages: {
         'base/dist': {
             defaultExtension: false,
-            format: 'cjs',
+            format: 'register',
             map: Object.keys(window.__karma__.files).filter(onlyAppFiles).reduce(createPathRecords, {})
         }
     }
