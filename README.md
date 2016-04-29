@@ -7,9 +7,9 @@ Angular2 Application Scaffolder is designed to be an application generator for Y
 
 ![alt text][gulp] &nbsp; ![alt text][sass] &nbsp; ![alt text][typescript] &nbsp; ![alt text][live-reload] &nbsp; ![alt text][bower] &nbsp; ![alt text][karma] &nbsp; ![alt text][jasmine] &nbsp; ![alt text][protractor] &nbsp; ![alt text][bootstrap] &nbsp; ![alt text][jquery]
 
-It implements **Gulp**, **Sass**, **TypeScript**, **Live Reload**, **Bower**, **_Karma_**, **_Jasmine_**, **_Protractor_**, **Bootstrap**, **jQuery**.
+It implements **Gulp**, **Sass**, **TypeScript**, **Live Reload**, **Bower**, **Karma**, **Jasmine**, **_Protractor_**, **Bootstrap**, **jQuery**.
 
-> Tools in italics are not yet implemented.
+> Tools in italic are not yet implemented.
 
 ### Install
 
