@@ -1,5 +1,5 @@
 {
-  "name": "<%- appName %>",
+  "name": "myApp",
   "version": "0.0.0",
   "description": "Angular2 application",
   "main": "index.html",

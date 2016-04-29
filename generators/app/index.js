@@ -12,12 +12,6 @@ module.exports = yeoman.Base.extend({
       chalk.red('Welcome to angular2 application scaffolder')
     ));
 
-    var prompts = [];
-
-    this.prompt(prompts, function (props) {
-      this.props = props;
-      done();
-    }.bind(this));
   },
 
   writing: function () {
