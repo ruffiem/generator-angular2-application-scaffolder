@@ -8,6 +8,7 @@ module.exports = function(config) {
 
         files: [
             // paths loaded by Karma
+            {pattern: 'bower_components/traceur-runtime/traceur-runtime.js', included: true, watched: true},
             {pattern: 'node_modules/angular2/bundles/angular2-polyfills.js', included: true, watched: true},
             {pattern: 'node_modules/systemjs/dist/system.src.js', included: true, watched: true},
             {pattern: 'node_modules/rxjs/bundles/Rx.js', included: true, watched: true},

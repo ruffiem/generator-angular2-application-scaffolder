@@ -1,5 +1,6 @@
 {
-  "name": "My Angular2 App",
+  "name": "<%- appName %>",
+  "version": "0.0.0",
   "description": "Angular2 application",
   "main": "index.html",
   "authors": [
@@ -16,6 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "traceur-runtime": "^0.0.107"
   }
 }

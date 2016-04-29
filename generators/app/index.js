@@ -4,7 +4,18 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 
 module.exports = yeoman.Base.extend({
+  constructor: function () {
+      yeoman.generators.Base.apply(this, arguments);
 
+      this.argument('appName', {
+          type: String,
+          required: false
+      });
+
+      this.appName = this.appname || path.basename(process.cwd());
+
+      this.props = {};
+  },
   prompting: function () {
     var done = this.async();
 
@@ -12,12 +23,18 @@ module.exports = yeoman.Base.extend({
       chalk.red('Welcome to angular2 application scaffolder')
     ));
 
-    var prompts = [];
-
-    this.prompt(prompts, function (props) {
-      this.props = props;
+    this.prompt({
+      type: 'input',
+      name: 'name',
+      message: 'Your project name',
+      //Defaults to the project's folder name if the input is skipped
+      default: this.appname
+    }, function(answers) {
+      this.props = answers;
+      this.log(answers.name);
       done();
     }.bind(this));
+
   },
 
   writing: function () {
@@ -41,7 +58,7 @@ module.exports = yeoman.Base.extend({
     var me = this;
 
     filelist.forEach(function(f) {
-      me.copy(f, f);
+      me.copy(f, f, { appName: this.props.name });
     });
     dirlist.forEach(function(f) {
       me.bulkDirectory(f, f);
