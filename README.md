@@ -26,7 +26,7 @@ Then generate your new project:
 $ yo generator-angular2-application-scaffolder
 ```
 
-### Launch the developement environment
+### Launch the development environment
 
 Go to your project and run:
 

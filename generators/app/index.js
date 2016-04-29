@@ -44,15 +44,13 @@ module.exports = yeoman.Base.extend({
     filelist.forEach(function(f) {
       me.copy(f, f);
     });
+    
     dirlist.forEach(function(f) {
       me.bulkDirectory(f, f);
     });
   },
 
   install: function () {
-    this.installDependencies({
-      skipInstall: this.options['skip-install'],
-      skipMessage: this.options['skip-message']
-    });
+    this.installDependencies();
   }
 });
