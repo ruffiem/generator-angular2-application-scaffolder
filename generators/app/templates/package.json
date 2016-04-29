@@ -1,7 +1,7 @@
 {
-  "name": "My Angular2 App",
+  "name": "MyAngular2App",
   "version": "1.0.0",
-  "description": "Angular2 application ",
+  "description": "Angular2 application",
   "main": "index.html",
   "scripts": {
     "test": "karma"
