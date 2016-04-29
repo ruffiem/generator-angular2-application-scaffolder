@@ -6,16 +6,7 @@
     "ruffiem"
   ],
   "license": "MIT",
-  "keywords": [
-    "angular2",
-    "karma",
-    "proctator",
-    "jade",
-    "bootstrap",
-    "material2",
-    "sass",
-    "gulp"
-  ],
+  "keywords": [],
   "homepage": "https://github.com/ruffiem/generator-angular2-application-scaffolder",
   "ignore": [
     "**/.*",

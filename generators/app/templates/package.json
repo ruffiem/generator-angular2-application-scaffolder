@@ -5,22 +5,15 @@
   "main": "index.html",
   "scripts": {
     "pretest": "gulp build",
-    "test": "karma start karma.conf.js"
+    "test": "karma start karma.conf.js",
+    "posttest": "node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
+    "coverage": "http-server -c-1 -o -p 9875 ./coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ruffiem/generator-angular2-application-scaffolder"
   },
-  "keywords": [
-    "angular2",
-    "karma",
-    "proctator",
-    "jade",
-    "bootstrap",
-    "material2",
-    "sass",
-    "gulp"
-  ],
+  "keywords": [],
   "author": "Michel Ruffieux",
   "license": "MIT",
   "bugs": {
@@ -62,14 +55,16 @@
     "gulp-uglify": "^1.5.3",
     "gulp-watch": "^4.3.5",
     "gulp-wiredep": "0.0.0",
+    "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.3",
     "karma-coverage": "^0.5.5",
     "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0",
     "main-bower-files": "^2.11.1",
     "open": "0.0.5",
-    "phantomjs": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.7",
     "remap-istanbul": "^0.6.3",
     "run-sequence": "^1.1.5",
     "semver": "^5.1.0",

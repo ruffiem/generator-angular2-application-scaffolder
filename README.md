@@ -26,19 +26,27 @@ Then generate your new project:
 $ yo generator-angular2-application-scaffolder
 ```
 
-Then go to your project folder and run
+### Launch the developement environment
+
+Go to your project and run:
 
 ````bash
 $ gulp serve
 ````
 
-Unit testing with Karma
+This command will run a live reload server and will watch for changes to instantly update your local distribution.
+
+### Unit testing with Karma
 
 ````bash
 $ npm test
 ````
 
-This command will run a live reload server and will watch for changes to instantly update your local distribution.
+### Unit testing output with Coverage
+
+````bash
+$ npm run coverage
+````
 
 ### License
 
