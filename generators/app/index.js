@@ -27,7 +27,8 @@ module.exports = yeoman.Base.extend({
       'gulpfile.js',
       'package.json',
       'tsconfig.json',
-      'typings.json'
+      'typings.json',
+      'karma.conf.js'
     ];
 
     var dirlist = [

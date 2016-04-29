@@ -4,7 +4,8 @@
   "description": "Angular2 application",
   "main": "index.html",
   "scripts": {
-    "test": "karma"
+    "pretest": "gulp build",
+    "test": "karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -48,7 +49,6 @@
     "express": "^4.13.4",
     "gulp": "^3.9.1",
     "gulp-bump": "^2.1.0",
-    "gulp-clean-css": "^2.0.5",
     "gulp-concat": "^2.6.0",
     "gulp-consolidate": "^0.2.0",
     "gulp-filter": "^4.0.0",
@@ -57,21 +57,23 @@
     "gulp-minify-html": "^1.0.6",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-template": "^4.0.0",
-    "gulp-typescript": "^2.12.2",
     "gulp-uglify": "^1.5.3",
     "gulp-watch": "^4.3.5",
     "gulp-wiredep": "0.0.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-coverage": "^0.5.5",
+    "karma-jasmine": "^0.3.8",
     "main-bower-files": "^2.11.1",
     "open": "0.0.5",
+    "remap-istanbul": "^0.6.3",
     "run-sequence": "^1.1.5",
     "semver": "^5.1.0",
     "serve-static": "^1.10.2",
     "stream-series": "^0.1.1",
-    "systemjs-builder": "^0.15.14",
-    "tiny-lr": "^0.2.1",
-    "typescript": "^1.8.9"
+    "tiny-lr": "^0.2.1"
   }
 }
