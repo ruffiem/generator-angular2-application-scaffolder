@@ -1,6 +1,5 @@
 {
-  "name": "myApp",
-  "version": "0.0.0",
+  "name": "My Angular2 App",
   "description": "Angular2 application",
   "main": "index.html",
   "authors": [
