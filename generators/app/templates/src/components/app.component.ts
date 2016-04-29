@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
 
 @Component({
     selector: 'app',
@@ -6,4 +6,10 @@ import {Component} from 'angular2/core';
     styleUrls: ['./components/app.component.css']
 })
 
-export class AppComponent { }
+export class AppComponent {
+  items:Array<string>;
+
+  ngOnInit() {
+    this.items = ['one','two','three'];
+  }
+}
