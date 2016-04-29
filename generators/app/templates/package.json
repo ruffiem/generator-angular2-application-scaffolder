@@ -69,6 +69,7 @@
     "karma-jasmine": "^0.3.8",
     "main-bower-files": "^2.11.1",
     "open": "0.0.5",
+    "phantomjs": "^2.1.7",
     "remap-istanbul": "^0.6.3",
     "run-sequence": "^1.1.5",
     "semver": "^5.1.0",
