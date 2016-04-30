@@ -42,7 +42,7 @@ This command will run a live reload server and will watch for changes to instant
 $ npm test
 ````
 
-### Unit testing output with Coverage
+### Code coverage with Istanbul
 
 ````bash
 $ npm run coverage
