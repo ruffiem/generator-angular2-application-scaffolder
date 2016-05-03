@@ -3,13 +3,13 @@
 [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]  [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ruffiem/generator-angular2-application-scaffolder/blob/master/LICENSE)   [![Twitter](https://img.shields.io/twitter/url/https/github.com/ruffiem/generator-gulp-angular2.svg?style=social)](https://twitter.com/intent/tweet?text=Angular2-application-scaffolder:&url=http://ow.ly/4nbJ8f)
 
 ### What is it ?
-Angular2 Application Scaffolder is designed to be an application generator for Yeoman providing a full stack working environment for Angular2 (beta 16+) developments.
+Angular2 Application Scaffolder is designed to be an application generator for Yeoman providing a full stack working environment for Angular2 (beta 17+) developments.
 
 ![alt text][gulp] &nbsp; ![alt text][sass] &nbsp; ![alt text][typescript] &nbsp; ![alt text][live-reload] &nbsp; ![alt text][bower] &nbsp; ![alt text][karma] &nbsp; ![alt text][jasmine] &nbsp; ![alt text][protractor] &nbsp; ![alt text][bootstrap] &nbsp; ![alt text][jquery]
 
-It implements **Gulp**, **Sass**, **TypeScript**, **Live Reload**, **Bower**, **Karma**, **Jasmine**, **_Protractor_**, **Bootstrap**, **jQuery**.
+It implements **Gulp**, **Sass**, **TypeScript**, **Live Reload**, **Bower**, **Karma**, **Jasmine**, **Protractor**, **Bootstrap**, **jQuery**.
 
-> Tools in italic are not yet implemented.
+> Tools in italic - if any - are not yet implemented.
 
 ### Install
 
