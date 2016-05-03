@@ -12,21 +12,26 @@ module.exports = yeoman.Base.extend({
       chalk.red('Welcome to angular2 application scaffolder')
     ));
 
-    // var prompts = [];
-    //
-    // this.prompt(prompts, function (props) {
-    //   this.props = props;
-    //   done();
-    // }.bind(this));
-    done();
+    var prompts = [{
+      name: 'appName',
+      message: 'What is the name of your app?',
+      default: 'some-name-here'
+    }];
+
+    this.prompt(prompts, function (props) {
+      this.props.appName = props.appName;
+      done();
+    }.bind(this));
   },
 
   writing: function () {
 
+    var appName = { appName: this.props.appName || 'test' };
+
     var filelist = [
-      'bower.json',
+      //'bower.json',
       'gulpfile.js',
-      'package.json',
+      //'package.json',
       'tsconfig.json',
       'typings.json',
       'karma.conf.js',
@@ -41,6 +46,9 @@ module.exports = yeoman.Base.extend({
     ];
 
     var me = this;
+
+    me.template('bower.json', 'bower.json', appName);
+    me.template('package.json', 'package.json', appName);
 
     filelist.forEach(function(f) {
       me.copy(f, f);

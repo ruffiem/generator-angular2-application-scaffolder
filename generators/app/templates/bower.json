@@ -1,5 +1,5 @@
 {
-  "name": "MyAngular2App",
+  "name": "<%= appName %>",
   "description": "Angular2 application",
   "main": "index.html",
   "authors": [
