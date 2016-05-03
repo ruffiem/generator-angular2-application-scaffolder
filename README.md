@@ -42,6 +42,12 @@ This command will run a live reload server and will watch for changes to instant
 $ npm test
 ````
 
+### End-to-end testing with Protractor
+
+````bash
+$ npm run e2e
+````
+
 ### Code coverage with Istanbul
 
 ````bash
