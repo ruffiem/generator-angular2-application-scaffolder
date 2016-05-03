@@ -12,12 +12,12 @@ module.exports = yeoman.Base.extend({
       chalk.red('Welcome to angular2 application scaffolder')
     ));
 
-    var prompts = [];
-
-    this.prompt(prompts, function (props) {
-      this.props = props;
-      done();
-    }.bind(this));
+    // var prompts = [];
+    //
+    // this.prompt(prompts, function (props) {
+    //   this.props = props;
+    //   done();
+    // }.bind(this));
 
   },
 
@@ -30,8 +30,7 @@ module.exports = yeoman.Base.extend({
       'tsconfig.json',
       'typings.json',
       'karma.conf.js',
-      'karma-test-shim.js',
-      'protractor.conf.js'
+      'karma-test-shim.js'
     ];
 
     var dirlist = [
