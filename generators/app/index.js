@@ -30,7 +30,8 @@ module.exports = yeoman.Base.extend({
       'tsconfig.json',
       'typings.json',
       'karma.conf.js',
-      'karma-test-shim.js'
+      'karma-test-shim.js',
+      'protractor.conf.js'
     ];
 
     var dirlist = [
@@ -44,7 +45,7 @@ module.exports = yeoman.Base.extend({
     filelist.forEach(function(f) {
       me.copy(f, f);
     });
-    
+
     dirlist.forEach(function(f) {
       me.bulkDirectory(f, f);
     });
