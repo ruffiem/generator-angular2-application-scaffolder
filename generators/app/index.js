@@ -18,7 +18,7 @@ module.exports = yeoman.Base.extend({
     //   this.props = props;
     //   done();
     // }.bind(this));
-
+    done();
   },
 
   writing: function () {
