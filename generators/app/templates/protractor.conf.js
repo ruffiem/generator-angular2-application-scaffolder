@@ -7,8 +7,8 @@ exports.config = {
   baseUrl: 'http://localhost:' + conf.ports.http,
 
   specs: [
-    join(__dirname, conf.paths.src + '/**/**.e2e.ts'),
-    join(__dirname, conf.paths.src + '/**/*.e2e.ts')
+    join(__dirname, conf.paths.src, '/**/**.e2e.ts'),
+    join(__dirname, conf.paths.src, '/**/*.e2e.ts')
   ],
   exclude: [],
 
