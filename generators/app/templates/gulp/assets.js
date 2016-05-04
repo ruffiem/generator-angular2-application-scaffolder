@@ -21,10 +21,10 @@ gulp.task('static', function () {
  */
 gulp.task('other', function () {
   return gulp.src([
-    join(conf.paths.src, '/**/*'),
-    join('!' + conf.paths.src, '/**/*.{html,css,js,scss}')
+    join(__dirname, conf.paths.src, '**/*'),
+    join(__dirname, '!' + conf.paths.src, '**/*.{html,css,js,scss}')
   ])
-    .pipe(gulp.dest(join(conf.paths.dist, '/')));
+    .pipe(gulp.dest(join(__dirname, conf.paths.dist, '/')));
 });
 
 gulp.task('assets', function (done) {

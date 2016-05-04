@@ -27,6 +27,7 @@ module.exports = yeoman.Base.extend({
   writing: function () {
 
     var appName = { appName: 'test' };
+    //var appName = { appName: this.props.appName || 'test' };
 
     var filelist = [
       //'bower.json',
