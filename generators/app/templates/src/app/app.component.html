@@ -1,1 +1,13 @@
-<h1>My First Angular 2 Application</h1>
+<h1>{{ appForm.value.name }}</h1>
+<div class="test">
+  <form [ngFormModel]="appForm" (submit)="notify($event)">
+    <input [(ngModel)]="appForm.value.name" ngControl="name" placeholder="name your app" required />
+    <button type="submit">Change page title</button>
+  </form>
+</div>
+
+<div class="logo">
+  <a href="//angular.io" target="_angular">
+    <img src="./assets/images/angular.png" />
+  </a>
+</div>

@@ -23,12 +23,11 @@ module.exports = yeoman.Base.extend({
 
   writing: function () {
 
+    this.conflicter.force = true;
     var appName = { appName: this.props.appName || 'undefined' };
 
     var filelist = [
-      //'bower.json',
       'gulpfile.js',
-      //'package.json',
       'tsconfig.json',
       'typings.json',
       'karma.conf.js',
@@ -44,9 +43,6 @@ module.exports = yeoman.Base.extend({
 
     var me = this;
 
-    me.template('bower.json', 'bower.json', appName);
-    me.template('package.json', 'package.json', appName);
-
     filelist.forEach(function(f) {
       me.copy(f, f);
     });
@@ -54,6 +50,10 @@ module.exports = yeoman.Base.extend({
     dirlist.forEach(function(f) {
       me.bulkDirectory(f, f);
     });
+
+    me.template('bower.json', 'bower.json', appName);
+    me.template('package.json', 'package.json', appName);
+    me.template('src/index.html', 'src/index.html', appName);
   },
 
   install: function () {

@@ -22,7 +22,7 @@ gulp.task('static', function () {
 gulp.task('other', function () {
   return gulp.src([
     join(__dirname, conf.paths.src, '**/*'),
-    join(__dirname, '!' + conf.paths.src, '**/*.{html,css,js,scss}')
+    join('!', __dirname, conf.paths.src, '**/*.{html,css,js,ts,sass,scss}')
   ])
     .pipe(gulp.dest(join(__dirname, conf.paths.dist, '/')));
 });
