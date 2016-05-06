@@ -7,27 +7,23 @@ module.exports = yeoman.Base.extend({
 
   prompting: function () {
     var done = this.async();
-    //
-    // this.log(yosay(
-    //   chalk.red('Welcome to angular2 application scaffolder')
-    // ));
-    //
-    // var prompts = [{
-    //   name: 'appName',
-    //   message: 'What is the name of your app?',
-    //   default: 'some-name-here'
-    // }];
 
-    // this.prompt(prompts, function (props) {
-    //   this.props.appName = props.appName;
+    var prompts = [{
+      name: 'appName',
+      message: 'What is the name of your app?',
+      default: 'some-name-here'
+    }];
+
+    return this.prompt(prompts).then(function (props) {
+      this.props = props;
       done();
-    // });
+    }.bind(this));
+
   },
 
   writing: function () {
 
-    var appName = { appName: 'test' };
-    //var appName = { appName: this.props.appName || 'test' };
+    var appName = { appName: this.props.appName || 'undefined' };
 
     var filelist = [
       //'bower.json',
