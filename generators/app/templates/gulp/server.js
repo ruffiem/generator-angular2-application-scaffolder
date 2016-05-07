@@ -20,7 +20,7 @@ gulp.task('serve', ['clean', 'build', 'livereload'], function () {
     runSequence('build', function () {
       notifyLiveReload(e);
     });
-  });
+  }).on('error', conf.errorHandler('watch'));
   serve();
 });
 
