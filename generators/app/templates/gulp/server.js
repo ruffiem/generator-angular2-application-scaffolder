@@ -17,7 +17,7 @@ var join = path.join;
  */
 gulp.task('serve', ['clean', 'build', 'livereload'], function () {
   watch(join(__dirname, conf.paths.src, '/**'), function (e) {
-    runSequence('build', function () {
+    runSequence('build:live', function () {
       notifyLiveReload(e);
     });
   }).on('error', conf.errorHandler('watch'));

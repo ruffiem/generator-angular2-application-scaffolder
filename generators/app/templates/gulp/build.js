@@ -18,5 +18,12 @@ gulp.task('clean', function () {
  * build task runs all required tasks to launch the app
  */
 gulp.task('build', function (done) {
+  runSequence('clean', 'assets', 'scripts', 'styles', 'inject', done);
+});
+
+/*
+ * build:live bypass cleaning distribution folder
+ */
+gulp.task('build:live', function (done) {
   runSequence('assets', 'scripts', 'styles', 'inject', done);
 });

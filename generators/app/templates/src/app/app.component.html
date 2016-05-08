@@ -1,4 +1,5 @@
 <h1>{{ appForm.value.name }}</h1>
+
 <div class="test">
   <form [ngFormModel]="appForm" (submit)="notify($event)">
     <input [(ngModel)]="appForm.value.name" ngControl="name" placeholder="name your app" required />
