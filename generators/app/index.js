@@ -32,7 +32,8 @@ module.exports = yeoman.Base.extend({
       'typings.json',
       'karma.conf.js',
       'karma-test-shim.js',
-      'protractor.conf.js'
+      'protractor.conf.js',
+      'tslint.json'
     ];
 
     var dirlist = [
@@ -54,6 +55,7 @@ module.exports = yeoman.Base.extend({
     me.template('bower.json', 'bower.json', appName);
     me.template('package.json', 'package.json', appName);
     me.template('src/index.html', 'src/index.html', appName);
+    me.template('src/app/app.component.ts', 'src/app/app.component.ts', appName);
   },
 
   install: function () {

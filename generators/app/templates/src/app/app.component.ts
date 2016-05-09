@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
   constructor(private builder: FormBuilder, private title: Title) {
     this.appForm = builder.group({
-      name: ['', Validators.required]
+      name: ['<%= appName %>', Validators.required]
     });
   }
 

@@ -1,6 +1,6 @@
 # Angular2 Application Scaffolder
 
-[![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]  [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ruffiem/generator-angular2-application-scaffolder/blob/master/LICENSE)   [![Twitter](https://img.shields.io/twitter/url/https/github.com/ruffiem/generator-gulp-angular2.svg?style=social)](https://twitter.com/intent/tweet?text=Angular2-application-scaffolder:&url=http://ow.ly/4nbJ8f)
+[![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]  [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ruffiem/generator-angular2-application-scaffolder/blob/master/LICENSE)   [![Twitter](https://img.shields.io/twitter/url/https/github.com/ruffiem/generator-gulp-angular2.svg?style=social)](https://twitter.com/intent/tweet?text=Angular2-application-scaffolder:&url=http://ow.ly/4nbJ8f)
 
 ### What is it ?
 Angular2 Application Scaffolder is designed to be an application generator for Yeoman providing a full stack working environment for Angular2 (beta 17+) developments.
@@ -74,5 +74,3 @@ MIT © [ruffiem](mailto:ruffiem@gmail.com)
 [npm-url]: https://npmjs.org/package/generator-angular2-application-scaffolder
 [daviddm-image]: https://david-dm.org/ruffiem/generator-angular2-application-scaffolder.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/ruffiem/generator-angular2-application-scaffolder
-[coveralls-image]: https://coveralls.io/repos/ruffiem/generator-angular2-application-scaffolder/badge.svg
-[coveralls-url]: https://coveralls.io/r/ruffiem/generator-angular2-application-scaffolder
