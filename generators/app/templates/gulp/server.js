@@ -9,6 +9,7 @@ var runSequence = require('run-sequence');
 var tinylr = require('tiny-lr')();
 var connectLivereload = require('connect-livereload');
 var watch = require('gulp-watch');
+var gutil = require('gulp-util');
 var path = require('path');
 var join = path.join;
 
@@ -16,12 +17,20 @@ var join = path.join;
  * create a watcher to track changes
  */
 gulp.task('serve', ['clean', 'build', 'livereload'], function () {
+
+  var c = gutil.colors.bold;
+
   watch(join(__dirname, conf.paths.src, '/**'), function (e) {
     runSequence('build:live', function () {
       notifyLiveReload(e);
     });
   }).on('error', conf.errorHandler('watch'));
   serve();
+
+  gutil.log(c.green('-----------------------------------'));
+  gutil.log(c.green('Serving from:'), c.cyan('http://localhost:' + conf.ports.http));
+  gutil.log(c.green('-----------------------------------'));
+
 });
 
 /*
