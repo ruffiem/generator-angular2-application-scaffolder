@@ -23,7 +23,7 @@ $ npm install -g generator-angular2-application-scaffolder
 Then generate your new project:
 
 ```bash
-$ yo generator-angular2-application-scaffolder
+$ yo angular2-application-scaffolder
 ```
 
 ### Launch the development environment
