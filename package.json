@@ -1,6 +1,6 @@
 {
   "name": "generator-angular2-application-scaffolder",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "Angular2 Application Scaffolder is designed to be an application generator for Yeoman providing a full stack working environment for Angular2 (beta 17+) developments.",
   "homepage": "https://github.com/ruffiem/generator-angular2-application-scaffolder",
   "author": {
