@@ -39,10 +39,14 @@ exports.ports = {
   liveReload: 4002
 };
 
+exports.getEnv = function (env) {
+  return env.seq.indexOf('dev') || env.seq.indexOf('dev:live') > 0 ? 'dev' : null;
+};
+
 /*
  * error output
  */
-exports.errorHandler = function(title) {
+exports.errorHandler = function (title) {
   'use strict';
 
   return function(err) {

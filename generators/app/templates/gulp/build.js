@@ -10,30 +10,29 @@ var join = path.join;
 /*
  * clean task removes all the content from the distribution folder
  */
-gulp.task('clean:dev', function () {
-  del(join(__dirname, conf.paths.tmp));
+gulp.task('clean', function () {
+  var env = conf.getEnv(this) === 'dev' ? conf.paths.tmp : conf.paths.dist;
+  del(join(__dirname, env));
 });
-gulp.task('clean:build', function () {
-  del(join(__dirname, conf.paths.dist));
-});
+
 
 /*
  * build task runs all required tasks to launch the app
  */
 gulp.task('dev', function (done) {
-  runSequence('clean:dev', 'assets:dev', 'scripts:dev', 'styles:dev', 'inject:dev', done);
+  runSequence('clean', 'assets', 'scripts', 'styles', 'inject:dev', done);
 });
 
 /*
  * build task runs all required tasks to launch the app
  */
 gulp.task('build', function (done) {
-  runSequence('clean:build', 'assets:build', 'scripts:build', 'styles:build', 'inject:build', done);
+  runSequence('clean', 'assets', 'scripts', 'styles', 'inject:build', done);
 });
 
 /*
  * build:live bypass cleaning distribution folder
  */
 gulp.task('dev:live', function (done) {
-  runSequence('assets:dev', 'scripts:dev', 'styles:dev', 'inject:dev', done);
+  runSequence('assets', 'scripts', 'styles', 'inject:dev', done);
 });

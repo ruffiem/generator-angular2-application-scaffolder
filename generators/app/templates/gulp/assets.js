@@ -3,7 +3,6 @@
 var gulp = require('gulp');
 var conf = require('./conf');
 var runSequence = require('run-sequence');
-var minifyHTML = require('gulp-minify-html');
 var filter = require('gulp-filter');
 var minifyCSS = require('gulp-clean-css');
 var path = require('path');
@@ -23,8 +22,7 @@ gulp.task('static:dev', function () {
  */
 gulp.task('static:build', function () {
 
-  var htmlFilter = filter('**/*.html', { restore: true});
-  var cssFilter = filter('**/*.css', { restore: true});
+  var cssFilter = filter('**/*.css', { restore: true });
 
   return gulp.src([
     join(__dirname, conf.paths.src, '**/*.html'),
@@ -38,25 +36,24 @@ gulp.task('static:build', function () {
 /*
  * other task takes care of the other files (images, archives, etc.)
  */
-gulp.task('other:build', function () {
+gulp.task('other', function () {
+
+  var env = conf.getEnv(this) === 'dev' ? conf.paths.tmp : conf.paths.dist;
+
   return gulp.src([
     join(__dirname, conf.paths.src, '**/*'),
     join('!', __dirname, conf.paths.src, '**/*.{html,css,js,ts,sass,scss}')
   ])
-    .pipe(gulp.dest(join(__dirname, conf.paths.dist, '/')));
-});
-gulp.task('other:dev', function () {
-  return gulp.src([
-    join(__dirname, conf.paths.src, '**/*'),
-    join('!', __dirname, conf.paths.src, '**/*.{html,css,js,ts,sass,scss}')
-  ])
-    .pipe(gulp.dest(join(__dirname, conf.paths.tmp, '/')));
+    .pipe(gulp.dest(join(__dirname, env, '/')));
 });
 
-gulp.task('assets:dev', function (done) {
-  runSequence('static:dev', 'other:dev', done);
-});
+gulp.task('assets', function (done) {
+  var env = conf.getEnv(this);
 
-gulp.task('assets:build', function (done) {
-  runSequence('static:build', 'other:build', done);
+  if(env === 'dev') {
+    runSequence('static:dev', 'other', done);
+  } else {
+    runSequence('static:build', 'other', done);
+  }
+
 });

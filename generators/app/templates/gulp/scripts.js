@@ -22,7 +22,10 @@ var tsProject = tsc.createProject('tsconfig.json', {
 /*
  * typescript task compiles ts files to js
  */
-gulp.task('typescript:build', function () {
+gulp.task('typescript', function () {
+
+  var env = conf.getEnv(this) === 'dev' ? conf.paths.tmp : conf.paths.dist;
+
   var result = gulp.src([join(__dirname, conf.paths.src, '**/*ts'), join('!' + __dirname, conf.paths.src, 'system.ts')])
     .pipe(plumber())
     .pipe(sourcemaps.init())
@@ -32,22 +35,13 @@ gulp.task('typescript:build', function () {
     .pipe(uglify())
     .pipe(template(templateLocals()))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(join(__dirname, conf.paths.dist)));
-});
-gulp.task('typescript:dev', function () {
-  var result = gulp.src([join(__dirname, conf.paths.src, '**/*ts'), join('!' + __dirname, conf.paths.src, 'system.ts')])
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(tsc(tsProject));
-
-  return result.js
-    .pipe(uglify())
-    .pipe(template(templateLocals()))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(join(__dirname, conf.paths.tmp)));
+    .pipe(gulp.dest(join(__dirname, env)));
 });
 
-gulp.task('system:build', function () {
+gulp.task('system', function () {
+
+  var env = conf.getEnv(this) === 'dev' ? conf.paths.tmp : conf.paths.dist;
+
   var result = gulp.src(join(__dirname, conf.paths.src, 'system.ts'))
     .pipe(insert.prepend('declare var System;'))
     .pipe(plumber())
@@ -58,28 +52,15 @@ gulp.task('system:build', function () {
     .pipe(uglify())
     .pipe(template(templateLocals()))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(join(__dirname, conf.paths.dist)));
-});
-
-gulp.task('system:dev', function () {
-  var result = gulp.src(join(__dirname, conf.paths.src, 'system.ts'))
-    .pipe(insert.prepend('declare var System;'))
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(tsc(tsProject));
-
-  return result.js
-    .pipe(uglify())
-    .pipe(template(templateLocals()))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(join(__dirname, conf.paths.tmp)));
+    .pipe(gulp.dest(join(__dirname, env)));
 });
 
 /*
- *
+ * Prepare angular2 libraries for dev environment
  */
 gulp.task('angular2:dev', function () {
   var rpath = [];
+
   for(var i in conf.lib) {
     rpath.push(join(__dirname, conf.lib[i]));
   }
@@ -89,12 +70,13 @@ gulp.task('angular2:dev', function () {
 });
 
 /*
- *
+ * Concatenate angular2 libraries for production
  */
 gulp.task('angular2:build', function () {
 
   var jsFilter = filter('**/*.js', { restore: true});
   var rpath = [];
+
   for(var i in conf.lib) {
     rpath.push(join(__dirname, conf.lib[i]));
   }
@@ -110,15 +92,16 @@ gulp.task('angular2:build', function () {
 /*
  * scripts task run the sequence to concat javascript files
  */
-gulp.task('scripts:dev', function (done) {
-  runSequence('typescript:dev', 'system:dev', 'angular2:dev', done);
-});
+gulp.task('scripts', function (done) {
 
-/*
- * scripts task run the sequence to concat javascript files
- */
-gulp.task('scripts:build', function (done) {
-  runSequence('typescript:build', 'system:build', 'angular2:build', done);
+  var env = conf.getEnv(this);
+
+  if(env === 'dev') {
+    runSequence('typescript', 'system', 'angular2:dev', done);
+  } else {
+    runSequence('typescript', 'system', 'angular2:build', done);
+  }
+
 });
 
 /*
