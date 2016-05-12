@@ -1,14 +1,18 @@
 /// <reference path="../../typings/jasmine.d.ts" />
 
-import {it, describe, expect, beforeEach, inject} from 'angular2/testing';
+import {it, describe, expect, beforeEach, beforeEachProviders, inject} from 'angular2/testing';
 import {AppComponent} from "./app.component";
 
 describe('AppComponent Tests', () => {
   let list:AppComponent;
 
-  beforeEach(() => {
-    list = new AppComponent();
-  });
+  beforeEachProviders(() => [
+    AppComponent
+  ]);
+
+  beforeEach(inject([AppComponent], l => {
+    list = l;
+  }));
 
   it('Should get 3', () => {
     list.ngOnInit();
