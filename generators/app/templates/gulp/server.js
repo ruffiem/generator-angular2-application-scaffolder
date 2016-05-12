@@ -16,12 +16,12 @@ var join = path.join;
 /*
  * create a watcher to track changes
  */
-gulp.task('serve', ['clean', 'build', 'livereload'], function () {
+gulp.task('serve', ['dev', 'livereload'], function () {
 
   var c = gutil.colors.bold;
 
   watch(join(__dirname, conf.paths.src, '/**'), function (e) {
-    runSequence('build:live', function () {
+    runSequence('dev:live', function () {
       notifyLiveReload(e);
     });
   }).on('error', conf.errorHandler('watch'));
@@ -45,9 +45,9 @@ gulp.task('livereload', function () {
  */
 function serve() {
   var app;
-  app = express().use('/', connectLivereload({port: conf.ports.liveReload}), serveStatic(join(__dirname, conf.paths.dist)));
+  app = express().use('/', connectLivereload({port: conf.ports.liveReload}), serveStatic(join(__dirname, conf.paths.tmp)));
   app.all('/*', function (req, res) {
-    res.sendFile(join(__dirname, conf.paths.dist, 'index.html'));
+    res.sendFile(join(__dirname, conf.paths.tmp, 'index.html'));
   });
   app.listen(conf.ports.http, function () {
     openResource('http://localhost:' + conf.ports.http);

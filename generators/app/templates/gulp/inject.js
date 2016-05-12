@@ -19,25 +19,42 @@ var join = path.join;
 /*
  * inject task fills the index.html with JS and CSS additional files
  */
-gulp.task('inject', function () {
-  var angular2 = gulp.src(injectAngular2(), {read: false});
-  var bower = injectBower();
+gulp.task('inject:dev', function () {
+  var angular2 = gulp.src(injectAngular2('tmp'), {read: false});
+  var bower = injectBower('tmp');
+  return gulp.src(join(__dirname, conf.paths.tmp) + '/index.html')
+    .pipe(inject(series(angular2, bower), { relative : true }))
+    .pipe(template(templateLocals()))
+    .pipe(gulp.dest(join(__dirname, conf.paths.tmp)));
+});
+
+/*
+ * inject task fills the index.html with JS and CSS additional files
+ */
+gulp.task('inject:build', function () {
+  var angular2 = gulp.src(injectAngular2('dist'), {read: false});
+  var bower = injectBower('dist');
   return gulp.src(join(__dirname, conf.paths.dist) + '/index.html')
     .pipe(inject(series(angular2, bower), { transform: transformPath() }))
     .pipe(template(templateLocals()))
-    //.pipe(minifyHTML())
+    .pipe(minifyHTML())
     .pipe(gulp.dest(join(__dirname, conf.paths.dist)));
 });
 
 /*
  * injectAngular2 will inject Angular2 required dependencies
  */
-function injectAngular2() {
+function injectAngular2(env) {
   var src = conf.lib.map(function (path) {
-    return join(__dirname, conf.paths.lib, path.split('/').pop());
+    return join(__dirname, conf.paths[env], 'lib', path.split('/').pop());
   });
 
-  src.push(join(__dirname, conf.paths.dist, 'system.js'));
+
+  if(env === 'dist') {
+    src.push(join(__dirname, conf.paths.lib, 'lib.js'));
+  }
+
+  src.push(join(__dirname, conf.paths[env], 'system.js'));
 
   return src;
 }
@@ -45,20 +62,22 @@ function injectAngular2() {
 /*
  * injectBower will inject Bower components
  */
-function injectBower() {
+function injectBower(env) {
   var jsFilter = filter('**/*.js', { restore: true});
   var cssFilter = filter('**/*.css', { restore: true});
 
   return gulp.src(mainBowerFiles())
   .pipe(jsFilter)
+  .pipe(concat('vendor.js'))
   .pipe(uglify())
-  .pipe(gulp.dest(join(__dirname, conf.paths.dist, 'vendor')))
+  .pipe(rename({ suffix: '.min' }))
+  .pipe(gulp.dest(join(__dirname, conf.paths[env], 'vendor')))
   .pipe(jsFilter.restore)
   .pipe(cssFilter)
   .pipe(concat('vendor.css'))
   .pipe(minifyCSS())
   .pipe(rename({ suffix: '.min' }))
-  .pipe(gulp.dest(join(__dirname, conf.paths.dist, 'vendor')))
+  .pipe(gulp.dest(join(__dirname, conf.paths[env], 'vendor')))
   .pipe(cssFilter.restore);
 }
 

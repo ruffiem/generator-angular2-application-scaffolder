@@ -30,29 +30,39 @@ $ yo angular2-application-scaffolder
 
 Go to your project and run:
 
-````bash
+```bash
 $ gulp serve
-````
+```
 
-This command will run a live reload server and will watch for changes to instantly update your local distribution.
+This command will run a live reload server and will watch for changes to instantly update your dev distribution.
+
+### Build application for production
+
+Go to your project and run:
+
+```bash
+$ gulp build
+```
+
+This command will run all the compilation tasks and create a dist/ folder to your root directory with optimized code for production 
 
 ### Unit testing with Karma
 
-````bash
+```bash
 $ npm test
-````
+```
 
 ### End-to-end testing with Protractor
 
-````bash
+```bash
 $ npm run e2e
-````
+```
 
 ### Code coverage with Istanbul
 
-````bash
+```bash
 $ npm run coverage
-````
+```
 
 ### License
 
