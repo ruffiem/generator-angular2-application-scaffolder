@@ -47,10 +47,16 @@ $ gulp build
 
 This command will run all the compilation tasks and create a dist/ folder to your root directory with optimized code for production
 
-### Unit testing with Karma
+### Run all tests at once (Unit-test + E2E)
 
 ```bash
 $ npm test
+```
+
+### Unit testing with Karma
+
+```bash
+$ npm run unit
 ```
 
 ### End-to-end testing with Protractor

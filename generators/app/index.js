@@ -10,7 +10,8 @@ module.exports = yeoman.Base.extend({
 
     var prompts = [{
       name: 'appName',
-      message: 'What is the name of your app?'
+      message: 'What is the name of your app?',
+      default: 'kebab-case'
     }];
 
     return this.prompt(prompts).then(function (props) {
@@ -23,6 +24,7 @@ module.exports = yeoman.Base.extend({
   writing: function () {
 
     this.conflicter.force = true;
+
     var appName = { appName: this.props.appName || 'undefined' };
 
     var filelist = [
