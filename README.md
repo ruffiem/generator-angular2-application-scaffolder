@@ -5,9 +5,10 @@
 ### What is it ?
 Angular2 Application Scaffolder is designed to be an application generator for Yeoman providing a full stack working environment for Angular2 (beta 17+) developments.
 
+
 ![alt text][gulp] &nbsp; ![alt text][sass] &nbsp; ![alt text][typescript] &nbsp; ![alt text][live-reload] &nbsp; ![alt text][bower] &nbsp; ![alt text][karma] &nbsp; ![alt text][jasmine] &nbsp; ![alt text][protractor] &nbsp; ![alt text][bootstrap] &nbsp; ![alt text][jquery]
 
-It implements **Gulp**, **Sass**, **TypeScript**, **Live Reload**, **Bower**, **Karma**, **Jasmine**, **Protractor**, **Bootstrap**, **jQuery**.
+It implements **Gulp**, **Sass**, **TypeScript**, **Live Reload**, **Bower**, **Karma**, **Jasmine**, **Protractor**, **Bootstrap**, **jQuery**, _Jade_, _Dart_, _Angular2 Material_, _TingoDB_, _Ng-React_.
 
 > Tools in italic - if any - are not yet implemented.
 
@@ -44,7 +45,7 @@ Go to your project and run:
 $ gulp build
 ```
 
-This command will run all the compilation tasks and create a dist/ folder to your root directory with optimized code for production 
+This command will run all the compilation tasks and create a dist/ folder to your root directory with optimized code for production
 
 ### Unit testing with Karma
 
@@ -64,9 +65,19 @@ $ npm run e2e
 $ npm run coverage
 ```
 
+### Roadmap
+#### Mile 5
+
+> - [ ] _Improve sample code_
+> - [ ] _Add relevant tools (Jade? Angular Material ? Ionic ? Ng-React?)_
+> - [ ] _Add user choices when scaffolding the application_
+> - [x] Update Licence
+
+[View complete roadmap](https://github.com/ruffiem/generator-angular2-application-scaffolder/blob/master/ROADMAP.md)
+
 ### License
 
-MIT © [ruffiem](mailto:ruffiem@gmail.com)
+MIT © [Linalis](http://linalis.com), Michel Ruffieux ([ruffiem](mailto:ruffiem@gmail.com)) and contributors.
 
 [yo]: https://pbs.twimg.com/profile_images/3786155988/46ea2dd8b1bdd31a8ba61044cb5b6ebe_normal.png "Yeoman"
 [gulp]: https://pbs.twimg.com/profile_images/417078109075034112/iruTC031_normal.png "Gulp"

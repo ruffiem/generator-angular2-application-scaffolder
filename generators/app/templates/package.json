@@ -16,6 +16,7 @@
   },
   "keywords": [],
   "author": "Michel Ruffieux",
+  "email": "ruffiem@gmail.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ruffiem/generator-angular2-application-scaffolder/issues"
