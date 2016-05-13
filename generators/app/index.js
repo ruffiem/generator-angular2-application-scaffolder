@@ -10,8 +10,7 @@ module.exports = yeoman.Base.extend({
 
     var prompts = [{
       name: 'appName',
-      message: 'What is the name of your app?',
-      default: 'some-name-here'
+      message: 'What is the name of your app?'
     }];
 
     return this.prompt(prompts).then(function (props) {
