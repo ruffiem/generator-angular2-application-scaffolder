@@ -54,7 +54,10 @@ function injectAngular2(env) {
     src.push(join(__dirname, conf.paths.lib, 'lib.js'));
   }
 
-  src.push(join(__dirname, conf.paths[env], 'system.js'));
+  src.push(
+    join(__dirname, conf.paths[env], 'system.js'),
+    join(__dirname, conf.paths.bower, 'bootstrap/dist/css/bootstrap.min.css')
+  );
 
   return src;
 }
@@ -66,7 +69,10 @@ function injectBower(env) {
   var jsFilter = filter('**/*.js', { restore: true});
   var cssFilter = filter('**/*.css', { restore: true});
 
-  return gulp.src(mainBowerFiles())
+  var bowerFiles = mainBowerFiles();
+  bowerFiles.push(join(__dirname, conf.paths.bower, 'bootstrap/dist/css/bootstrap.min.css'));
+
+  return gulp.src(bowerFiles)
   .pipe(jsFilter)
   .pipe(concat('vendor.js'))
   .pipe(uglify())
