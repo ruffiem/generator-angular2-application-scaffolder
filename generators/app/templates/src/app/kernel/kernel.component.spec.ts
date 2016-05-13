@@ -1,16 +1,16 @@
-/// <reference path="../../typings/jasmine.d.ts" />
+/// <reference path="../../../typings/jasmine.d.ts" />
 
 import {it, describe, expect, beforeEach, beforeEachProviders, inject} from 'angular2/testing';
-import {AppComponent} from "./app.component";
+import {KernelComponent} from "./kernel.component";
 
-describe('AppComponent Tests', () => {
-  let list:AppComponent;
+describe('KernelComponent Tests', () => {
+  let list:KernelComponent;
 
   beforeEachProviders(() => [
-    AppComponent
+    KernelComponent
   ]);
 
-  beforeEach(inject([AppComponent], l => {
+  beforeEach(inject([KernelComponent], l => {
     list = l;
   }));
 

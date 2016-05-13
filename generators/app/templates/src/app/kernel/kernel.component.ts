@@ -2,14 +2,17 @@ import { Component, OnInit } from 'angular2/core';
 import { FormBuilder, Validators } from 'angular2/common';
 import { Title } from 'angular2/platform/browser';
 
+import { InitCaps } from '../shared/pipes/init-caps.pipe';
+
 @Component({
     selector: 'app',
     providers: [ Title ],
-    templateUrl: './app/app.component.html',
-    styleUrls: [ './app/app.component.css' ]
+    templateUrl: './app/kernel/kernel.html',
+    styleUrls: [ './app/kernel/kernel.css' ],
+    pipes: [ InitCaps ]
 })
 
-export class AppComponent implements OnInit {
+export class KernelComponent implements OnInit {
   appForm:any;
   items:Array<string>;
 

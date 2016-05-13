@@ -2,10 +2,12 @@
 ### (The Roadmap)
 
 #### _Mile 5_
+- [x] Update Licence
+- [x] Application architecture improvement
+- [x] Added Pipe sample code
 - [ ] _Improve sample code_
 - [ ] _Add relevant tools (Jade? Angular Material ? Ionic ? Ng-React?)_
 - [ ] _Add user choices when scaffolding the application_
-- [x] Update Licence
 
 #### ~~Mile 4~~
 - [x] ~~Lorem ipsum dolor sit amet.~~

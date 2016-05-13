@@ -54,7 +54,7 @@ module.exports = yeoman.Base.extend({
     me.template('bower.json', 'bower.json', appName);
     me.template('package.json', 'package.json', appName);
     me.template('src/index.html', 'src/index.html', appName);
-    me.template('src/app/app.component.ts', 'src/app/app.component.ts', appName);
+    me.template('src/app/kernel/kernel.component.ts', 'src/app/kernel/kernel.component.ts', appName);
   },
 
   install: function () {
