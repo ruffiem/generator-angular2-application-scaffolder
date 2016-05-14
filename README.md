@@ -74,10 +74,12 @@ $ npm run coverage
 ### Roadmap
 #### Mile 5
 
-> - [ ] _Improve sample code_
-> - [ ] _Add relevant tools (Jade? Angular Material ? Ionic ? Ng-React?)_
-> - [ ] _Add user choices when scaffolding the application_
-> - [x] Update Licence
+>- [x] Update Licence
+>- [x] Application architecture improvement
+>- [x] Added Pipe sample code
+>- [ ] _Improve sample code_
+>- [ ] _Add relevant tools (Jade? Angular Material ? Ionic ? Ng-React?)_
+>- [ ] _Add user choices when scaffolding the application_
 
 [View complete roadmap](https://github.com/ruffiem/generator-angular2-application-scaffolder/blob/master/ROADMAP.md)
 
