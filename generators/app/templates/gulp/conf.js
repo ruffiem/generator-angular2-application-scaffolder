@@ -40,7 +40,7 @@ exports.ports = {
 };
 
 exports.getEnv = function (env) {
-  return env.seq.indexOf('dev') || env.seq.indexOf('dev:live') > 0 ? 'dev' : null;
+  return env.seq.indexOf('dev') > 0 || env.seq.indexOf('dev:live') > 0 ? 'dev' : null;
 };
 
 /*
