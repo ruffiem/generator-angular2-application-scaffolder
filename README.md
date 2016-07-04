@@ -1,4 +1,4 @@
-# Angular2 Application Scaffolder
+# Angular2 Application Scaffolder (deprecated)
 
 [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]  [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ruffiem/generator-angular2-application-scaffolder/blob/master/LICENSE)   [![Twitter](https://img.shields.io/twitter/url/https/github.com/ruffiem/generator-gulp-angular2.svg?style=social)](https://twitter.com/intent/tweet?text=Angular2-application-scaffolder:&url=http://ow.ly/4nbJ8f)
 
@@ -90,7 +90,7 @@ MIT © [Linalis](http://linalis.com), Michel Ruffieux ([ruffiem](mailto:ruffiem@
 [yo]: https://pbs.twimg.com/profile_images/3786155988/46ea2dd8b1bdd31a8ba61044cb5b6ebe_normal.png "Yeoman"
 [gulp]: https://pbs.twimg.com/profile_images/417078109075034112/iruTC031_normal.png "Gulp"
 [sass]: https://pbs.twimg.com/profile_images/583681608269471744/jCR2zNJV_normal.png "Sass"
-[typescript]: https://pbs.twimg.com/profile_images/2660272602/87a5a0fdc86455c3f94b0b0eebfdb1b9_normal.png "TypeScript"
+[typescript]: http://www.udos86.de/img/logo/typescript.png "TypeScript"
 [live-reload]: https://pbs.twimg.com/profile_images/1650346891/128_normal.png "Live Reload"
 [bower]: https://pbs.twimg.com/profile_images/3536632979/66db62603f426a8fc6664081811be6d4_normal.png "Bower"
 [karma]: https://pbs.twimg.com/profile_images/420262386352652288/TidYGd6a_normal.png "Karma"
